@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SetupViewController.h"
 
 @interface LoginViewController ()
 
@@ -24,14 +25,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)loginWithFB:(UIButton *)sender
+{
+    SetupViewController *setupVC = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
+    [self presentViewController:setupVC animated:YES completion:nil];
 }
-*/
-
+-(IBAction)createAccount:(UIButton *)sender
+{
+    
+}
 @end
