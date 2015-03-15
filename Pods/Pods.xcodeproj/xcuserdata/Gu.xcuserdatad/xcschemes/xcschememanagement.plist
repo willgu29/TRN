@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MDCSwipeToChoose.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TRN-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TRN-MDCSwipeToChoose.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,8 +29,74 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TRNTests-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TRNTests-MDCSwipeToChoose.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TRNTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>26C57513A873357DD61A15A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44870A0BED550CAF33554348</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>766086A3D3AF11CCD6501039</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A64C36A6D5947B2A996890CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1AD25854AC0F05796D6A208</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D23A6E92B8757A7C95C0258C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E268B77BE6D8FA16A120AC63</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8BA4D74F331F36623A0B2E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBFB3D28B047564078590DE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

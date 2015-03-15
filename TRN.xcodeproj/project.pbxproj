@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4D0318ACED8624A201D0BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 342255BAC0A528B1ABAF1AF1 /* libPods.a */; };
 		840D847C1AB5699D0092C886 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D847B1AB5699D0092C886 /* main.m */; };
 		840D847F1AB5699D0092C886 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D847E1AB5699D0092C886 /* AppDelegate.m */; };
 		840D84871AB5699D0092C886 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840D84861AB5699D0092C886 /* Images.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342255BAC0A528B1ABAF1AF1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		356CB4D13888C046CC277539 /* Pods-TRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRN/Pods-TRN.release.xcconfig"; sourceTree = "<group>"; };
 		840D84761AB5699D0092C886 /* TRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840D847A1AB5699D0092C886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E81A957B7361FC1859A5DA /* libPods-TRN.a in Frameworks */,
+				0A4D0318ACED8624A201D0BD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				85BDFA34DAE23C4B5A315076 /* libPods-TRN.a */,
+				342255BAC0A528B1ABAF1AF1 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,7 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRN/Pods-TRN-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A012D863219F80DDAD9679BD /* Check Pods Manifest.lock */ = {
