@@ -15,6 +15,9 @@
 		840D84A41AB56D970092C886 /* EventFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84A21AB56D970092C886 /* EventFeedViewController.xib */; };
 		840D84A91AB56DEA0092C886 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84A71AB56DEA0092C886 /* LoginViewController.m */; };
 		840D84AA1AB56DEA0092C886 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84A81AB56DEA0092C886 /* LoginViewController.xib */; };
+		840D84AE1AB56F4E0092C886 /* EventFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84AD1AB56F4E0092C886 /* EventFetcher.m */; };
+		840D84B21AB578920092C886 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84B01AB578920092C886 /* SetupViewController.m */; };
+		840D84B31AB578920092C886 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84B11AB578920092C886 /* SetupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		840D84A61AB56DEA0092C886 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		840D84A71AB56DEA0092C886 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		840D84A81AB56DEA0092C886 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		840D84AC1AB56F4E0092C886 /* EventFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventFetcher.h; sourceTree = "<group>"; };
+		840D84AD1AB56F4E0092C886 /* EventFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventFetcher.m; sourceTree = "<group>"; };
+		840D84AF1AB578920092C886 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		840D84B01AB578920092C886 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		840D84B11AB578920092C886 /* SetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,8 @@
 		840D84781AB5699D0092C886 /* TRN */ = {
 			isa = PBXGroup;
 			children = (
+				840D84B41AB5793A0092C886 /* External */,
+				840D84AB1AB56F3D0092C886 /* APIs */,
 				840D84A51AB56DCE0092C886 /* LoginInterface */,
 				840D849F1AB56D790092C886 /* EventInterface */,
 				840D847D1AB5699D0092C886 /* AppDelegate.h */,
@@ -136,8 +146,27 @@
 				840D84A61AB56DEA0092C886 /* LoginViewController.h */,
 				840D84A71AB56DEA0092C886 /* LoginViewController.m */,
 				840D84A81AB56DEA0092C886 /* LoginViewController.xib */,
+				840D84AF1AB578920092C886 /* SetupViewController.h */,
+				840D84B01AB578920092C886 /* SetupViewController.m */,
+				840D84B11AB578920092C886 /* SetupViewController.xib */,
 			);
 			name = LoginInterface;
+			sourceTree = "<group>";
+		};
+		840D84AB1AB56F3D0092C886 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				840D84AC1AB56F4E0092C886 /* EventFetcher.h */,
+				840D84AD1AB56F4E0092C886 /* EventFetcher.m */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		840D84B41AB5793A0092C886 /* External */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D84B31AB578920092C886 /* SetupViewController.xib in Resources */,
 				840D84871AB5699D0092C886 /* Images.xcassets in Resources */,
 				840D84A41AB56D970092C886 /* EventFeedViewController.xib in Resources */,
 				840D84AA1AB56DEA0092C886 /* LoginViewController.xib in Resources */,
@@ -241,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840D84A91AB56DEA0092C886 /* LoginViewController.m in Sources */,
+				840D84AE1AB56F4E0092C886 /* EventFetcher.m in Sources */,
 				840D847F1AB5699D0092C886 /* AppDelegate.m in Sources */,
 				840D84A31AB56D970092C886 /* EventFeedViewController.m in Sources */,
+				840D84B21AB578920092C886 /* SetupViewController.m in Sources */,
 				840D847C1AB5699D0092C886 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

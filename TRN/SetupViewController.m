@@ -1,18 +1,18 @@
 //
-//  EventFeedViewController.m
+//  SetupViewController.m
 //  TRN
 //
 //  Created by William Gu on 3/15/15.
 //  Copyright (c) 2015 William Gu. All rights reserved.
 //
 
-#import "EventFeedViewController.h"
+#import "SetupViewController.h"
 
-@interface EventFeedViewController ()
+@interface SetupViewController ()
 
 @end
 
-@implementation EventFeedViewController
+@implementation SetupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,16 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - IBActons
-
--(IBAction)settings:(UIButton *)sender
-{
-    
-}
--(IBAction)addEvent:(UIButton *)sender
-{
-    
-}
 
 
 @end
