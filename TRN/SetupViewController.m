@@ -8,7 +8,7 @@
 
 #import "SetupViewController.h"
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
-
+#import "EventFeedViewController.h"
 
 @interface SetupViewController ()
 
@@ -19,14 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MDCSwipeToChooseView *swipeView = [self setupMDCSwipeToChoose];
+    MDCSwipeToChooseView *swipeView = [self createNewMDCSwipeToChoose];
+    UIImage *swipeImage = [self getImageFromURL:@"http://tupleapp.com/someImageHosting/emailLogo.png"];
+
+
     
-    NSString *path = @"http://tupleapp.com/someImageHosting/emailLogo.png";
-    NSURL *url = [NSURL URLWithString:path];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *img = [[UIImage alloc] initWithData:data];
-    
-    swipeView.imageView.image = img;
+    swipeView.imageView.image = swipeImage;
     [self.view addSubview:swipeView];
 }
 
@@ -39,7 +37,8 @@
 
 -(IBAction)submitAnswers:(UIButton *)sender
 {
-    
+    EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
+    [self presentViewController:eventVC animated:YES completion:nil];
 }
 
 
@@ -53,6 +52,8 @@
 // Sent before a choice is made. Cancel the choice by returning `NO`. Otherwise return `YES`.
 - (BOOL)view:(UIView *)view shouldBeChosenWithDirection:(MDCSwipeDirection)direction {
     if (direction == MDCSwipeDirectionLeft) {
+        return YES;
+    } else if (direction == MDCSwipeDirectionRight){
         return YES;
     } else {
         // Snap the view back and cancel the choice.
@@ -74,7 +75,7 @@
 }
 
 #pragma mark - Helpers
--(MDCSwipeToChooseView *)setupMDCSwipeToChoose
+-(MDCSwipeToChooseView *)createNewMDCSwipeToChoose
 {
     // You can customize MDCSwipeToChooseView using MDCSwipeToChooseViewOptions.
     MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
@@ -97,6 +98,12 @@
                                                                      options:options];
     return view;
 }
-
+-(UIImage *)getImageFromURL:(NSString *)path
+{
+    NSURL *url = [NSURL URLWithString:path];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    return img;
+}
 
 @end
