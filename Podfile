@@ -3,6 +3,8 @@ platform :ios, '7.0'
 
 pod "MDCSwipeToChoose"
 pod "AFNetworking", "~> 2.0"
+pod "Onboard"
+pod "CMPopTipView"
 
 target 'TRN' do
 

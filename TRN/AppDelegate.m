@@ -10,6 +10,8 @@
 #import "EventFeedViewController.h"
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "NSDataConvert.h"
+#import "ParseDatabaseValues.h"
 
 @interface AppDelegate ()
 
@@ -20,34 +22,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // [Optional] Power your app with Local Datastore. For more info, go to
-    // https://parse.com/docs/ios_guide#localdatastore/iOS
-    [Parse enableLocalDatastore];
-    
-    // Initialize Parse.
-    [Parse setApplicationId:@"jRr2J6zFk7wSYVNYQGS2FXezhpTR4S7HB20lnW5E"
-                  clientKey:@"kAd4pT9I7s03aUh9JiCmUq7ONGXLr3KZTyvL1i4Q"];
-    
-    // [Optional] Track statistics around application opens.
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    if (true) {
-        LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-        self.window.rootViewController = loginVC;
-    } else {
-        EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
-        self.window.rootViewController = eventVC;
-    }
-    
-   
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
+    [self setupParse:application withLaunchOptions:launchOptions];
+    [self setupPushNotifications:application];
+    [self setupWindowWithRootViewController:[self getRootViewController]];
     return YES;
 }
+
+
+#pragma mark - Register Push Notifications
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    [self saveDeviceTokenToParseAndUserDefaults:deviceToken];
+    if ([self isLoggedIn])
+    {
+        [self updateParseCurrentUserDeviceToken:[deviceToken hexadecimalString]];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -69,6 +60,85 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Helper functions
+
+-(void)saveDeviceTokenToParseAndUserDefaults:(NSData *)deviceToken
+{
+    [self saveDeviceTokenToParse:deviceToken];
+    [self saveDeviceTokenToUserDefaults:deviceToken withKey:@"deviceTokenTypeData"];
+    [self saveDeviceTokenToUserDefaults:[deviceToken hexadecimalString] withKey:@"deviceTokenTypeString"];
+}
+
+-(void)setupParse:(UIApplication *)application withLaunchOptions:(NSDictionary *)lauchOptions
+{
+    [Parse enableLocalDatastore];
+    [Parse setApplicationId:@"jZU7AQ02iAtDhPQlZt21V4PW0nFpAm3QhLAC77Zq"
+                  clientKey:@"m6qGTPDhpIg371cdMtMnaC73F0ZcB6CKKnp9I9uk"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:lauchOptions];
+ 
+}
+-(void)setupPushNotifications:(UIApplication *)application
+{
+    if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        // Register device for iOS8
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+        
+    } else {
+        // Register device for iOS7
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge];
+    }
+}
+
+-(void)saveDeviceTokenToParse:(NSData *)deviceToken
+{
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+-(void)saveDeviceTokenToUserDefaults:(id)deviceToken withKey:(NSString *)key
+{
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+-(BOOL)isLoggedIn
+{
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser)
+    {
+        return YES;
+    }
+    return NO;
+}
+-(void)updateParseCurrentUserDeviceToken:(NSString *)deviceToken
+{
+    PFUser *currentUser = [PFUser currentUser];
+    currentUser[P_DEVICE_TOKEN] = deviceToken;
+    [currentUser saveInBackground];
+}
+-(void)setupWindowWithRootViewController:(UIViewController *)rootVC
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = rootVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+-(UIViewController *)getRootViewController
+{
+    if ([self isLoggedIn])
+    {
+        EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
+        return eventVC;
+    }
+    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    return loginVC;
 }
 
 @end

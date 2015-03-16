@@ -20,14 +20,20 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CMPopTipView (2.2.0)
   - MDCSwipeToChoose (0.2.2)
+  - Onboard (2.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - CMPopTipView
   - MDCSwipeToChoose
+  - Onboard
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  CMPopTipView: f731ea93316c4f964d3d5d8e71b4ba0ae30bf5a4
   MDCSwipeToChoose: b14f3becc0011634d2f0a37f488b768b824a643d
+  Onboard: 27cdf8db29740f0c17ed81371a003b9833a5e700
 
 COCOAPODS: 0.36.0
