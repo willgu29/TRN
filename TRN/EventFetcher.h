@@ -10,4 +10,9 @@
 
 @interface EventFetcher : NSObject
 
+-(id)getEventOfTheDay;
+-(NSArray *)getLocalEvents;
+-(NSArray *)getPrivateEventsForUser:(NSString *)username;
+
+
 @end

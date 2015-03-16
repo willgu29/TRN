@@ -20,19 +20,25 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bolts (1.1.4)
   - CMPopTipView (2.2.0)
+  - Facebook-iOS-SDK (3.23.1):
+    - Bolts (~> 1.0)
   - MDCSwipeToChoose (0.2.2)
   - Onboard (2.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CMPopTipView
+  - Facebook-iOS-SDK
   - MDCSwipeToChoose
   - Onboard
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   CMPopTipView: f731ea93316c4f964d3d5d8e71b4ba0ae30bf5a4
+  Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
   MDCSwipeToChoose: b14f3becc0011634d2f0a37f488b768b824a643d
   Onboard: 27cdf8db29740f0c17ed81371a003b9833a5e700
 

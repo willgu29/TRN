@@ -5,7 +5,7 @@ pod "MDCSwipeToChoose"
 pod "AFNetworking", "~> 2.0"
 pod "Onboard"
 pod "CMPopTipView"
-
+pod 'Facebook-iOS-SDK'
 target 'TRN' do
 
 end

@@ -10,4 +10,18 @@
 
 @implementation EventCreator
 
+
+-(void)createEventOfTheDay
+{
+    
+}
+-(void)createLocalParseEvent
+{
+    
+}
+-(void)createPrivateParseEvent
+{
+    
+}
+
 @end

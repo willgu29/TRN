@@ -10,4 +10,8 @@
 
 @interface EventCreator : NSObject
 
+-(void)createEventOfTheDay;
+-(void)createLocalParseEvent;
+-(void)createPrivateParseEvent;
+
 @end
