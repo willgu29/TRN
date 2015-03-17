@@ -8,8 +8,16 @@
 
 #import "LoginViewController.h"
 #import "SetupViewController.h"
+#import "EventFeedViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
+#import "ParseDatabaseValues.h"
+#import "NSUserDefaultValues.h"
 
 @interface LoginViewController ()
+
+
 
 @end
 
@@ -27,11 +35,66 @@
 
 -(IBAction)loginWithFB:(UIButton *)sender
 {
-    SetupViewController *setupVC = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
-    [self presentViewController:setupVC animated:YES completion:nil];
+    
+    [PFFacebookUtils logInWithPermissions:[self getFBPermissions] block:^(PFUser *user, NSError *error) {
+        if (!user) {
+            [self displayPleaseLoginAlert];
+        } else if (user.isNew) {
+            [self getAndSaveFBDataForParseUserInCallback];
+            [self segueToSetupViewController];
+        } else {
+            [self segueToMainViewController];
+        }
+    }];
+
 }
 -(IBAction)createAccount:(UIButton *)sender
 {
     
 }
+#pragma mark - Helper functions
+-(NSArray *)getFBPermissions
+{
+    return @[@"public_profile", @"email", @"user_friends", @"user_likes", @"user_birthday", @"user_interests"];
+}
+-(void)getAndSaveFBDataForParseUserInCallback
+{
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            [self saveFBDataToParseUser:result];
+        } else {
+            // An error occurred, we need to handle the error
+            // See: https://developers.facebook.com/docs/ios/errors
+        }
+    }];
+}
+-(void)saveFBDataToParseUser:(id)userInfo
+{
+    PFUser *currentUser = [PFUser currentUser];
+    currentUser[P_FB_ID] = [userInfo valueForKey:@"id"];
+    currentUser[P_DEVICE_TOKEN] = [[NSUserDefaults standardUserDefaults] stringForKey:N_DEVICE_TOKEN_STRING];
+    currentUser[P_EMAIL] = [userInfo valueForKey:@"email"];
+    currentUser[P_FIRST_NAME] = [userInfo valueForKey:@"first_name"];
+    currentUser[P_LAST_NAME] = [userInfo valueForKey:@"last_name"];
+    currentUser[P_FULL_NAME] = [userInfo valueForKey:@"name"];
+    currentUser[P_BIRTHDAY] = [userInfo valueForKey:@"birthday"];
+    currentUser[P_GENDER] = [userInfo valueForKey:@"gender"];
+    [currentUser saveInBackground];
+}
+-(void)displayPleaseLoginAlert
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Uh oh.." message:@"Please login through facebook to continue!" delegate:nil cancelButtonTitle:@"Okay!" otherButtonTitles:nil];
+    [alertView show];
+}
+-(void)segueToSetupViewController
+{
+    SetupViewController *setupVC = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
+    [self presentViewController:setupVC animated:YES completion:nil];
+}
+-(void)segueToMainViewController
+{
+    EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
+    [self presentViewController:eventVC animated:YES completion:nil];
+}
+
 @end

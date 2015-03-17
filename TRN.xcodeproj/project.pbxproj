@@ -21,7 +21,6 @@
 		840D84B31AB578920092C886 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84B11AB578920092C886 /* SetupViewController.xib */; };
 		840D84B91AB6B6000092C886 /* CreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84B71AB6B6000092C886 /* CreateEventViewController.m */; };
 		840D84BA1AB6B6000092C886 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84B81AB6B6000092C886 /* CreateEventViewController.xib */; };
-		840D84BD1AB6EBBF0092C886 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84BB1AB6EBBF0092C886 /* Bolts.framework */; };
 		840D84BE1AB6EBBF0092C886 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84BC1AB6EBBF0092C886 /* Parse.framework */; };
 		840D84C01AB6EBD80092C886 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84BF1AB6EBD80092C886 /* AudioToolbox.framework */; };
 		840D84C21AB6EBE20092C886 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84C11AB6EBE20092C886 /* CFNetwork.framework */; };
@@ -39,6 +38,22 @@
 		840D84E01AB77AFF0092C886 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84DF1AB77AFF0092C886 /* Accounts.framework */; };
 		840D84E41AB77B240092C886 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84E31AB77B240092C886 /* Social.framework */; };
 		840D84E71AB795220092C886 /* EventCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84E61AB795220092C886 /* EventCreator.m */; };
+		840D84E91AB7B8220092C886 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D84E81AB7B8220092C886 /* ParseFacebookUtils.framework */; };
+		840D84ED1AB7BD620092C886 /* AccountCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84EB1AB7BD620092C886 /* AccountCreationViewController.m */; };
+		840D84EE1AB7BD620092C886 /* AccountCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84EC1AB7BD620092C886 /* AccountCreationViewController.xib */; };
+		840D84F31AB7F2B90092C886 /* CreateLocalEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84F11AB7F2B90092C886 /* CreateLocalEventViewController.m */; };
+		840D84F41AB7F2B90092C886 /* CreateLocalEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84F21AB7F2B90092C886 /* CreateLocalEventViewController.xib */; };
+		840D84F81AB7F2D10092C886 /* CreatePrivateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84F61AB7F2D10092C886 /* CreatePrivateEventViewController.m */; };
+		840D84F91AB7F2D10092C886 /* CreatePrivateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84F71AB7F2D10092C886 /* CreatePrivateEventViewController.xib */; };
+		840D84FE1AB8041F0092C886 /* EditUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D84FC1AB8041F0092C886 /* EditUserProfileViewController.m */; };
+		840D84FF1AB8041F0092C886 /* EditUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D84FD1AB8041F0092C886 /* EditUserProfileViewController.xib */; };
+		840D85041AB805370092C886 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D85021AB805370092C886 /* SettingsViewController.m */; };
+		840D85051AB805370092C886 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85031AB805370092C886 /* SettingsViewController.xib */; };
+		840D85091AB806A00092C886 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D85071AB806A00092C886 /* AboutUsViewController.m */; };
+		840D850A1AB806A00092C886 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85081AB806A00092C886 /* AboutUsViewController.xib */; };
+		840D850D1AB8080A0092C886 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850C1AB8080A0092C886 /* Router.m */; };
+		840D85111AB80A910092C886 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850F1AB80A910092C886 /* FeedbackViewController.m */; };
+		840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85101AB80A910092C886 /* FeedbackViewController.xib */; };
 		96E81A957B7361FC1859A5DA /* libPods-TRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BDFA34DAE23C4B5A315076 /* libPods-TRN.a */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +93,6 @@
 		840D84B61AB6B6000092C886 /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
 		840D84B71AB6B6000092C886 /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
 		840D84B81AB6B6000092C886 /* CreateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateEventViewController.xib; sourceTree = "<group>"; };
-		840D84BB1AB6EBBF0092C886 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		840D84BC1AB6EBBF0092C886 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		840D84BF1AB6EBD80092C886 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		840D84C11AB6EBE20092C886 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -102,6 +116,31 @@
 		840D84E31AB77B240092C886 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		840D84E51AB795220092C886 /* EventCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCreator.h; sourceTree = "<group>"; };
 		840D84E61AB795220092C886 /* EventCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCreator.m; sourceTree = "<group>"; };
+		840D84E81AB7B8220092C886 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		840D84EA1AB7BD620092C886 /* AccountCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCreationViewController.h; sourceTree = "<group>"; };
+		840D84EB1AB7BD620092C886 /* AccountCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCreationViewController.m; sourceTree = "<group>"; };
+		840D84EC1AB7BD620092C886 /* AccountCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCreationViewController.xib; sourceTree = "<group>"; };
+		840D84EF1AB7C4840092C886 /* NSUserDefaultValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultValues.h; sourceTree = "<group>"; };
+		840D84F01AB7F2B90092C886 /* CreateLocalEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateLocalEventViewController.h; sourceTree = "<group>"; };
+		840D84F11AB7F2B90092C886 /* CreateLocalEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateLocalEventViewController.m; sourceTree = "<group>"; };
+		840D84F21AB7F2B90092C886 /* CreateLocalEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateLocalEventViewController.xib; sourceTree = "<group>"; };
+		840D84F51AB7F2D10092C886 /* CreatePrivateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePrivateEventViewController.h; sourceTree = "<group>"; };
+		840D84F61AB7F2D10092C886 /* CreatePrivateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePrivateEventViewController.m; sourceTree = "<group>"; };
+		840D84F71AB7F2D10092C886 /* CreatePrivateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePrivateEventViewController.xib; sourceTree = "<group>"; };
+		840D84FB1AB8041F0092C886 /* EditUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditUserProfileViewController.h; sourceTree = "<group>"; };
+		840D84FC1AB8041F0092C886 /* EditUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditUserProfileViewController.m; sourceTree = "<group>"; };
+		840D84FD1AB8041F0092C886 /* EditUserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditUserProfileViewController.xib; sourceTree = "<group>"; };
+		840D85011AB805370092C886 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		840D85021AB805370092C886 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		840D85031AB805370092C886 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		840D85061AB806A00092C886 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		840D85071AB806A00092C886 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		840D85081AB806A00092C886 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		840D850B1AB8080A0092C886 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		840D850C1AB8080A0092C886 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
+		840D850E1AB80A910092C886 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		840D850F1AB80A910092C886 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		840D85101AB80A910092C886 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		85BDFA34DAE23C4B5A315076 /* libPods-TRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B591E1F0488B001CCC19B1AF /* Pods-TRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRN/Pods-TRN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +155,7 @@
 				840D84D31AB6EC1C0092C886 /* libsqlite3.dylib in Frameworks */,
 				840D84D41AB6EC1C0092C886 /* libz.dylib in Frameworks */,
 				840D84CE1AB6EC0A0092C886 /* Security.framework in Frameworks */,
+				840D84E91AB7B8220092C886 /* ParseFacebookUtils.framework in Frameworks */,
 				840D84CF1AB6EC0A0092C886 /* StoreKit.framework in Frameworks */,
 				840D84D01AB6EC0A0092C886 /* SystemConfiguration.framework in Frameworks */,
 				840D84CA1AB6EBF90092C886 /* QuartzCore.framework in Frameworks */,
@@ -124,7 +164,6 @@
 				840D84C61AB6EBEC0092C886 /* CoreLocation.framework in Frameworks */,
 				840D84C21AB6EBE20092C886 /* CFNetwork.framework in Frameworks */,
 				840D84C01AB6EBD80092C886 /* AudioToolbox.framework in Frameworks */,
-				840D84BD1AB6EBBF0092C886 /* Bolts.framework in Frameworks */,
 				96E81A957B7361FC1859A5DA /* libPods-TRN.a in Frameworks */,
 				840D84BE1AB6EBBF0092C886 /* Parse.framework in Frameworks */,
 				0A4D0318ACED8624A201D0BD /* libPods.a in Frameworks */,
@@ -164,11 +203,14 @@
 		840D84781AB5699D0092C886 /* TRN */ = {
 			isa = PBXGroup;
 			children = (
+				840D84EF1AB7C4840092C886 /* NSUserDefaultValues.h */,
 				840D84DC1AB772B50092C886 /* ParseDatabaseValues.h */,
 				840D84D51AB76F180092C886 /* Converters */,
 				840D84B41AB5793A0092C886 /* External */,
 				840D84AB1AB56F3D0092C886 /* APIs */,
+				840D85001AB804CD0092C886 /* SettingsExtrasInterface */,
 				840D84A51AB56DCE0092C886 /* LoginInterface */,
+				840D84FA1AB804020092C886 /* UserProfileInterface */,
 				840D849F1AB56D790092C886 /* EventInterface */,
 				840D84B51AB622AA0092C886 /* CreateEventInterface */,
 				840D847D1AB5699D0092C886 /* AppDelegate.h */,
@@ -221,6 +263,9 @@
 				840D84A61AB56DEA0092C886 /* LoginViewController.h */,
 				840D84A71AB56DEA0092C886 /* LoginViewController.m */,
 				840D84A81AB56DEA0092C886 /* LoginViewController.xib */,
+				840D84EA1AB7BD620092C886 /* AccountCreationViewController.h */,
+				840D84EB1AB7BD620092C886 /* AccountCreationViewController.m */,
+				840D84EC1AB7BD620092C886 /* AccountCreationViewController.xib */,
 				840D84AF1AB578920092C886 /* SetupViewController.h */,
 				840D84B01AB578920092C886 /* SetupViewController.m */,
 				840D84B11AB578920092C886 /* SetupViewController.xib */,
@@ -235,6 +280,8 @@
 				840D84AD1AB56F4E0092C886 /* EventFetcher.m */,
 				840D84E51AB795220092C886 /* EventCreator.h */,
 				840D84E61AB795220092C886 /* EventCreator.m */,
+				840D850B1AB8080A0092C886 /* Router.h */,
+				840D850C1AB8080A0092C886 /* Router.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -242,7 +289,7 @@
 		840D84B41AB5793A0092C886 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				840D84BB1AB6EBBF0092C886 /* Bolts.framework */,
+				840D84E81AB7B8220092C886 /* ParseFacebookUtils.framework */,
 				840D84BC1AB6EBBF0092C886 /* Parse.framework */,
 			);
 			name = External;
@@ -254,6 +301,12 @@
 				840D84B61AB6B6000092C886 /* CreateEventViewController.h */,
 				840D84B71AB6B6000092C886 /* CreateEventViewController.m */,
 				840D84B81AB6B6000092C886 /* CreateEventViewController.xib */,
+				840D84F01AB7F2B90092C886 /* CreateLocalEventViewController.h */,
+				840D84F11AB7F2B90092C886 /* CreateLocalEventViewController.m */,
+				840D84F21AB7F2B90092C886 /* CreateLocalEventViewController.xib */,
+				840D84F51AB7F2D10092C886 /* CreatePrivateEventViewController.h */,
+				840D84F61AB7F2D10092C886 /* CreatePrivateEventViewController.m */,
+				840D84F71AB7F2D10092C886 /* CreatePrivateEventViewController.xib */,
 			);
 			name = CreateEventInterface;
 			sourceTree = "<group>";
@@ -267,6 +320,32 @@
 				840D84D91AB76F210092C886 /* NSDataConvert.m */,
 			);
 			name = Converters;
+			sourceTree = "<group>";
+		};
+		840D84FA1AB804020092C886 /* UserProfileInterface */ = {
+			isa = PBXGroup;
+			children = (
+				840D84FB1AB8041F0092C886 /* EditUserProfileViewController.h */,
+				840D84FC1AB8041F0092C886 /* EditUserProfileViewController.m */,
+				840D84FD1AB8041F0092C886 /* EditUserProfileViewController.xib */,
+			);
+			name = UserProfileInterface;
+			sourceTree = "<group>";
+		};
+		840D85001AB804CD0092C886 /* SettingsExtrasInterface */ = {
+			isa = PBXGroup;
+			children = (
+				840D85011AB805370092C886 /* SettingsViewController.h */,
+				840D85021AB805370092C886 /* SettingsViewController.m */,
+				840D85031AB805370092C886 /* SettingsViewController.xib */,
+				840D85061AB806A00092C886 /* AboutUsViewController.h */,
+				840D85071AB806A00092C886 /* AboutUsViewController.m */,
+				840D85081AB806A00092C886 /* AboutUsViewController.xib */,
+				840D850E1AB80A910092C886 /* FeedbackViewController.h */,
+				840D850F1AB80A910092C886 /* FeedbackViewController.m */,
+				840D85101AB80A910092C886 /* FeedbackViewController.xib */,
+			);
+			name = SettingsExtrasInterface;
 			sourceTree = "<group>";
 		};
 		F5BEC26D47B12084D6BAED9D /* Pods */ = {
@@ -391,10 +470,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				840D84B31AB578920092C886 /* SetupViewController.xib in Resources */,
+				840D850A1AB806A00092C886 /* AboutUsViewController.xib in Resources */,
+				840D84EE1AB7BD620092C886 /* AccountCreationViewController.xib in Resources */,
 				840D84871AB5699D0092C886 /* Images.xcassets in Resources */,
 				840D84A41AB56D970092C886 /* EventFeedViewController.xib in Resources */,
 				840D84BA1AB6B6000092C886 /* CreateEventViewController.xib in Resources */,
+				840D84FF1AB8041F0092C886 /* EditUserProfileViewController.xib in Resources */,
+				840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */,
+				840D84F91AB7F2D10092C886 /* CreatePrivateEventViewController.xib in Resources */,
+				840D84F41AB7F2B90092C886 /* CreateLocalEventViewController.xib in Resources */,
 				840D84AA1AB56DEA0092C886 /* LoginViewController.xib in Resources */,
+				840D85051AB805370092C886 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,15 +532,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				840D84B91AB6B6000092C886 /* CreateEventViewController.m in Sources */,
+				840D84FE1AB8041F0092C886 /* EditUserProfileViewController.m in Sources */,
 				840D84A91AB56DEA0092C886 /* LoginViewController.m in Sources */,
+				840D84F31AB7F2B90092C886 /* CreateLocalEventViewController.m in Sources */,
+				840D85091AB806A00092C886 /* AboutUsViewController.m in Sources */,
 				840D84AE1AB56F4E0092C886 /* EventFetcher.m in Sources */,
 				840D847F1AB5699D0092C886 /* AppDelegate.m in Sources */,
+				840D84ED1AB7BD620092C886 /* AccountCreationViewController.m in Sources */,
 				840D84A31AB56D970092C886 /* EventFeedViewController.m in Sources */,
 				840D84B21AB578920092C886 /* SetupViewController.m in Sources */,
 				840D84DB1AB76F210092C886 /* NSDataConvert.m in Sources */,
 				840D84E71AB795220092C886 /* EventCreator.m in Sources */,
 				840D84DA1AB76F210092C886 /* Converter.m in Sources */,
+				840D85041AB805370092C886 /* SettingsViewController.m in Sources */,
+				840D84F81AB7F2D10092C886 /* CreatePrivateEventViewController.m in Sources */,
+				840D850D1AB8080A0092C886 /* Router.m in Sources */,
 				840D847C1AB5699D0092C886 /* main.m in Sources */,
+				840D85111AB80A910092C886 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

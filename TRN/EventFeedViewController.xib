@@ -37,6 +37,14 @@
                         <action selector="settings:" destination="-1" eventType="touchUpInside" id="kRE-G2-oQf"/>
                     </connections>
                 </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lah-gd-f1k">
+                    <rect key="frame" x="27" y="53" width="267" height="29"/>
+                    <segments>
+                        <segment title="local"/>
+                        <segment title="private"/>
+                        <segment title="messaging"/>
+                    </segments>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

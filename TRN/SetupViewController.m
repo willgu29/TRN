@@ -9,6 +9,7 @@
 #import "SetupViewController.h"
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 #import "EventFeedViewController.h"
+#import "Router.h"
 
 @interface SetupViewController ()
 
@@ -37,8 +38,9 @@
 
 -(IBAction)submitAnswers:(UIButton *)sender
 {
-    EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
-    [self presentViewController:eventVC animated:YES completion:nil];
+    UIViewController *navVC =  [Router createMainInterfaceWithNavVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 

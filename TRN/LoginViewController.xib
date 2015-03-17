@@ -22,8 +22,8 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP7-Oo-tg6">
-                    <rect key="frame" x="113" y="369" width="95" height="30"/>
-                    <state key="normal" title="Login with FB">
+                    <rect key="frame" x="103" y="368" width="115" height="30"/>
+                    <state key="normal" title="Connect with FB">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

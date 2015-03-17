@@ -12,6 +12,10 @@
 #import <Parse/Parse.h>
 #import "NSDataConvert.h"
 #import "ParseDatabaseValues.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import "NSUserDefaultValues.h"
+#import "Router.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self setupParse:application withLaunchOptions:launchOptions];
+    [self linkParseWithFacebook];
     [self setupPushNotifications:application];
     [self setupWindowWithRootViewController:[self getRootViewController]];
     return YES;
@@ -56,19 +61,39 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Logs 'install' and 'app activate' App Events.
+    [FBAppEvents activateApp];
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:[PFFacebookUtils session]];
+}
+
 #pragma mark - Helper functions
+
+-(void)linkParseWithFacebook
+{
+    [PFFacebookUtils initializeFacebook];
+}
 
 -(void)saveDeviceTokenToParseAndUserDefaults:(NSData *)deviceToken
 {
     [self saveDeviceTokenToParse:deviceToken];
-    [self saveDeviceTokenToUserDefaults:deviceToken withKey:@"deviceTokenTypeData"];
-    [self saveDeviceTokenToUserDefaults:[deviceToken hexadecimalString] withKey:@"deviceTokenTypeString"];
+    [self saveDeviceTokenToUserDefaults:deviceToken withKey:N_DEVICE_TOKEN_DATA];
+    [self saveDeviceTokenToUserDefaults:[deviceToken hexadecimalString] withKey:N_DEVICE_TOKEN_STRING];
 }
 
 -(void)setupParse:(UIApplication *)application withLaunchOptions:(NSDictionary *)lauchOptions
@@ -134,8 +159,7 @@
 {
     if ([self isLoggedIn])
     {
-        EventFeedViewController *eventVC = [[EventFeedViewController alloc] initWithNibName:@"EventFeedViewController" bundle:nil];
-        return eventVC;
+        return [Router createMainInterfaceWithNavVC];
     }
     LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     return loginVC;
