@@ -109,7 +109,7 @@
 		840D84D71AB76F210092C886 /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
 		840D84D81AB76F210092C886 /* NSDataConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataConvert.h; sourceTree = "<group>"; };
 		840D84D91AB76F210092C886 /* NSDataConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataConvert.m; sourceTree = "<group>"; };
-		840D84DC1AB772B50092C886 /* ParseDatabaseValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseDatabaseValues.h; sourceTree = "<group>"; };
+		840D84DC1AB772B50092C886 /* ParseUserValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseUserValues.h; sourceTree = "<group>"; };
 		840D84DD1AB77AE40092C886 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		840D84DF1AB77AFF0092C886 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		840D84E11AB77B090092C886 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -141,6 +141,7 @@
 		840D850E1AB80A910092C886 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		840D850F1AB80A910092C886 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		840D85101AB80A910092C886 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		84733C8E1AB8202C00B89ED5 /* ParseEventValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseEventValues.h; sourceTree = "<group>"; };
 		85BDFA34DAE23C4B5A315076 /* libPods-TRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B591E1F0488B001CCC19B1AF /* Pods-TRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRN/Pods-TRN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,7 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				840D84EF1AB7C4840092C886 /* NSUserDefaultValues.h */,
-				840D84DC1AB772B50092C886 /* ParseDatabaseValues.h */,
+				84733C8E1AB8202C00B89ED5 /* ParseEventValues.h */,
+				840D84DC1AB772B50092C886 /* ParseUserValues.h */,
 				840D84D51AB76F180092C886 /* Converters */,
 				840D84B41AB5793A0092C886 /* External */,
 				840D84AB1AB56F3D0092C886 /* APIs */,

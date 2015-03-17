@@ -11,7 +11,7 @@
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
 #import "NSDataConvert.h"
-#import "ParseDatabaseValues.h"
+#import "ParseUserValues.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "NSUserDefaultValues.h"

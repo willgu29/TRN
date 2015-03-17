@@ -12,7 +12,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
-#import "ParseDatabaseValues.h"
+#import "ParseUserValues.h"
 #import "NSUserDefaultValues.h"
 
 @interface LoginViewController ()
@@ -71,14 +71,14 @@
 -(void)saveFBDataToParseUser:(id)userInfo
 {
     PFUser *currentUser = [PFUser currentUser];
-    currentUser[P_FB_ID] = [userInfo valueForKey:@"id"];
-    currentUser[P_DEVICE_TOKEN] = [[NSUserDefaults standardUserDefaults] stringForKey:N_DEVICE_TOKEN_STRING];
-    currentUser[P_EMAIL] = [userInfo valueForKey:@"email"];
-    currentUser[P_FIRST_NAME] = [userInfo valueForKey:@"first_name"];
-    currentUser[P_LAST_NAME] = [userInfo valueForKey:@"last_name"];
-    currentUser[P_FULL_NAME] = [userInfo valueForKey:@"name"];
-    currentUser[P_BIRTHDAY] = [userInfo valueForKey:@"birthday"];
-    currentUser[P_GENDER] = [userInfo valueForKey:@"gender"];
+    currentUser[U_FB_ID] = [userInfo valueForKey:@"id"];
+    currentUser[U_DEVICE_TOKEN] = [[NSUserDefaults standardUserDefaults] stringForKey:N_DEVICE_TOKEN_STRING];
+    currentUser[U_EMAIL] = [userInfo valueForKey:@"email"];
+    currentUser[U_FIRST_NAME] = [userInfo valueForKey:@"first_name"];
+    currentUser[U_LAST_NAME] = [userInfo valueForKey:@"last_name"];
+    currentUser[U_FULL_NAME] = [userInfo valueForKey:@"name"];
+    currentUser[U_BIRTHDAY] = [userInfo valueForKey:@"birthday"];
+    currentUser[U_GENDER] = [userInfo valueForKey:@"gender"];
     [currentUser saveInBackground];
 }
 -(void)displayPleaseLoginAlert
