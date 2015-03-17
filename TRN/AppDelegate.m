@@ -145,7 +145,7 @@
 -(void)updateParseCurrentUserDeviceToken:(NSString *)deviceToken
 {
     PFUser *currentUser = [PFUser currentUser];
-    currentUser[P_DEVICE_TOKEN] = deviceToken;
+    currentUser[U_DEVICE_TOKEN] = deviceToken;
     [currentUser saveInBackground];
 }
 -(void)setupWindowWithRootViewController:(UIViewController *)rootVC

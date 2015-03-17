@@ -18,8 +18,9 @@
 #define E_USERS_INVITED @"usersInvited"
 #define E_USERS_ACCEPTED @"usersAccepted"
 #define E_USERS_DECLINED @"usersDeclined"
+#define E_EVENT_LOCATION @"eventLocation"
 
-
+#define EL_LOCATION_COORDINATE @"eventCoordinate"
 #define EL_STATUS @"status"
 #define EL_STATUS_IS_ACTIVE @"1"
 #define EL_STATUS_IS_IN_PROGRESS @"2

@@ -7,6 +7,7 @@
 //
 
 #import "EventCreator.h"
+#import <Parse/Parse.h>
 
 @implementation EventCreator
 
@@ -17,11 +18,18 @@
 }
 -(void)createLocalParseEvent
 {
+    PFObject *localEvent = [PFObject objectWithClassName:@"LocalEvents"];
+    
     
 }
 -(void)createPrivateParseEvent
 {
+    PFObject *privateEvent = [PFObject objectWithClassName:@"PrivateEvents"];
     
+    [privateEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+    }];
+
 }
 
 @end
