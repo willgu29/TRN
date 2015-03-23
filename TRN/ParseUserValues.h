@@ -18,6 +18,7 @@
 #define U_LAST_NAME @"lastName"
 #define U_FULL_NAME @"fullName"
 #define U_GENDER @"gender"
+#define U_WARNINGS_GIVEN @"warningsGiven"
 
 
 #endif

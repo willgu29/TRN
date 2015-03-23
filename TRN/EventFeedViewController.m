@@ -8,6 +8,7 @@
 
 #import "EventFeedViewController.h"
 #import "SettingsViewController.h"
+#import "Router.h"
 #import "CreateEventViewController.h"
 
 @interface EventFeedViewController ()
@@ -44,5 +45,37 @@
     [self.navigationController pushViewController:createVC animated:YES];
 }
 
+#pragma mark - UITableView Delegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *simpleTableIdentifier = [NSString stringWithFormat:@"%ld_%ld", (long)indexPath.section, (long)indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        
+    }
+    cell.textLabel.text = @"HI";
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self presentUserProfileVC:@"Will Gu"];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+#pragma mark - Helper Functions
+-(void)presentUserProfileVC:(NSString *)username
+{
+    UIViewController *userProfileVC = [Router createUserProfileVCWithUsername:username];
+    [self.navigationController pushViewController:userProfileVC animated:YES];
+}
 
 @end

@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Settings";
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -51,6 +52,7 @@
 -(IBAction)feedback:(UIButton *)sender
 {
     FeedbackViewController *feedbackVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
+    [self.navigationController pushViewController:feedbackVC animated:YES];
 }
 
 

@@ -30,6 +30,7 @@
     [self linkParseWithFacebook];
     [self setupPushNotifications:application];
     [self setupWindowWithRootViewController:[self getRootViewController]];
+
     return YES;
 }
 

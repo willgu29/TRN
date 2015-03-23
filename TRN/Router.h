@@ -12,5 +12,5 @@
 @interface Router : NSObject
 
 +(UIViewController *)createMainInterfaceWithNavVC;
-
++(UIViewController *)createUserProfileVCWithUsername:(NSString *)username;
 @end

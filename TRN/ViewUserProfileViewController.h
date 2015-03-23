@@ -10,4 +10,6 @@
 
 @interface ViewUserProfileViewController : UIViewController
 
+@property (nonatomic, strong) NSString *username; //load this users data
+
 @end

@@ -79,6 +79,7 @@
     currentUser[U_FULL_NAME] = [userInfo valueForKey:@"name"];
     currentUser[U_BIRTHDAY] = [userInfo valueForKey:@"birthday"];
     currentUser[U_GENDER] = [userInfo valueForKey:@"gender"];
+    currentUser[U_WARNINGS_GIVEN] = [NSNumber numberWithInt:0];
     [currentUser saveInBackground];
 }
 -(void)displayPleaseLoginAlert
