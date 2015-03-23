@@ -54,6 +54,14 @@
 		840D850D1AB8080A0092C886 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850C1AB8080A0092C886 /* Router.m */; };
 		840D85111AB80A910092C886 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850F1AB80A910092C886 /* FeedbackViewController.m */; };
 		840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85101AB80A910092C886 /* FeedbackViewController.xib */; };
+		84336D611ABE341300F18E76 /* ContactListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D601ABE341300F18E76 /* ContactListParser.m */; };
+		84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D631ABF82D600F18E76 /* ResourcesViewController.m */; };
+		84336D661ABF82D600F18E76 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84336D641ABF82D600F18E76 /* ResourcesViewController.xib */; };
+		84336D6A1ABF8F6700F18E76 /* LocalEventCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D691ABF8F6700F18E76 /* LocalEventCreator.m */; };
+		84336D6D1ABF8FA700F18E76 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D6C1ABF8FA700F18E76 /* Event.m */; };
+		84336D701ABF8FB700F18E76 /* LocalEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D6F1ABF8FB700F18E76 /* LocalEvent.m */; };
+		84336D751ABF937100F18E76 /* ViewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D731ABF937100F18E76 /* ViewUserProfileViewController.m */; };
+		84336D761ABF937100F18E76 /* ViewUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84336D741ABF937100F18E76 /* ViewUserProfileViewController.xib */; };
 		84733C931AB8C30500B89ED5 /* SendInvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733C911AB8C30500B89ED5 /* SendInvitesViewController.m */; };
 		84733C941AB8C30500B89ED5 /* SendInvitesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84733C921AB8C30500B89ED5 /* SendInvitesViewController.xib */; };
 		84733C971AB8C3E900B89ED5 /* ContactListFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84733C961AB8C3E900B89ED5 /* ContactListFetcher.m */; };
@@ -146,6 +154,20 @@
 		840D850E1AB80A910092C886 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		840D850F1AB80A910092C886 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		840D85101AB80A910092C886 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		84336D5F1ABE341300F18E76 /* ContactListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListParser.h; sourceTree = "<group>"; };
+		84336D601ABE341300F18E76 /* ContactListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListParser.m; sourceTree = "<group>"; };
+		84336D621ABF82D600F18E76 /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
+		84336D631ABF82D600F18E76 /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
+		84336D641ABF82D600F18E76 /* ResourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
+		84336D681ABF8F6700F18E76 /* LocalEventCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalEventCreator.h; sourceTree = "<group>"; };
+		84336D691ABF8F6700F18E76 /* LocalEventCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalEventCreator.m; sourceTree = "<group>"; };
+		84336D6B1ABF8FA700F18E76 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		84336D6C1ABF8FA700F18E76 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		84336D6E1ABF8FB700F18E76 /* LocalEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalEvent.h; sourceTree = "<group>"; };
+		84336D6F1ABF8FB700F18E76 /* LocalEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalEvent.m; sourceTree = "<group>"; };
+		84336D721ABF937100F18E76 /* ViewUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUserProfileViewController.h; sourceTree = "<group>"; };
+		84336D731ABF937100F18E76 /* ViewUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUserProfileViewController.m; sourceTree = "<group>"; };
+		84336D741ABF937100F18E76 /* ViewUserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewUserProfileViewController.xib; sourceTree = "<group>"; };
 		84733C8E1AB8202C00B89ED5 /* ParseEventValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseEventValues.h; sourceTree = "<group>"; };
 		84733C901AB8C30500B89ED5 /* SendInvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendInvitesViewController.h; sourceTree = "<group>"; };
 		84733C911AB8C30500B89ED5 /* SendInvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendInvitesViewController.m; sourceTree = "<group>"; };
@@ -227,7 +249,6 @@
 				840D84AB1AB56F3D0092C886 /* APIs */,
 				840D85001AB804CD0092C886 /* SettingsExtrasInterface */,
 				840D84A51AB56DCE0092C886 /* LoginInterface */,
-				840D84FA1AB804020092C886 /* UserProfileInterface */,
 				840D849F1AB56D790092C886 /* EventInterface */,
 				840D84B51AB622AA0092C886 /* CreateEventInterface */,
 				84733C8F1AB8C2EB00B89ED5 /* SendInvitesInterface */,
@@ -268,6 +289,7 @@
 		840D849F1AB56D790092C886 /* EventInterface */ = {
 			isa = PBXGroup;
 			children = (
+				84336D711ABF935A00F18E76 /* UserProfileInterface */,
 				840D84A01AB56D970092C886 /* EventFeedViewController.h */,
 				840D84A11AB56D970092C886 /* EventFeedViewController.m */,
 				840D84A21AB56D970092C886 /* EventFeedViewController.xib */,
@@ -294,14 +316,14 @@
 		840D84AB1AB56F3D0092C886 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				84336D671ABF8F5500F18E76 /* EventCreators */,
+				84336D5E1ABE33FD00F18E76 /* ContactList */,
 				840D84AC1AB56F4E0092C886 /* EventFetcher.h */,
 				840D84AD1AB56F4E0092C886 /* EventFetcher.m */,
 				840D84E51AB795220092C886 /* EventCreator.h */,
 				840D84E61AB795220092C886 /* EventCreator.m */,
 				840D850B1AB8080A0092C886 /* Router.h */,
 				840D850C1AB8080A0092C886 /* Router.m */,
-				84733C951AB8C3E900B89ED5 /* ContactListFetcher.h */,
-				84733C961AB8C3E900B89ED5 /* ContactListFetcher.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -355,6 +377,7 @@
 		840D85001AB804CD0092C886 /* SettingsExtrasInterface */ = {
 			isa = PBXGroup;
 			children = (
+				840D84FA1AB804020092C886 /* UserProfileInterface */,
 				840D85011AB805370092C886 /* SettingsViewController.h */,
 				840D85021AB805370092C886 /* SettingsViewController.m */,
 				840D85031AB805370092C886 /* SettingsViewController.xib */,
@@ -364,8 +387,41 @@
 				840D850E1AB80A910092C886 /* FeedbackViewController.h */,
 				840D850F1AB80A910092C886 /* FeedbackViewController.m */,
 				840D85101AB80A910092C886 /* FeedbackViewController.xib */,
+				84336D621ABF82D600F18E76 /* ResourcesViewController.h */,
+				84336D631ABF82D600F18E76 /* ResourcesViewController.m */,
+				84336D641ABF82D600F18E76 /* ResourcesViewController.xib */,
 			);
 			name = SettingsExtrasInterface;
+			sourceTree = "<group>";
+		};
+		84336D5E1ABE33FD00F18E76 /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				84733C951AB8C3E900B89ED5 /* ContactListFetcher.h */,
+				84733C961AB8C3E900B89ED5 /* ContactListFetcher.m */,
+				84336D5F1ABE341300F18E76 /* ContactListParser.h */,
+				84336D601ABE341300F18E76 /* ContactListParser.m */,
+			);
+			name = ContactList;
+			sourceTree = "<group>";
+		};
+		84336D671ABF8F5500F18E76 /* EventCreators */ = {
+			isa = PBXGroup;
+			children = (
+				84336D681ABF8F6700F18E76 /* LocalEventCreator.h */,
+				84336D691ABF8F6700F18E76 /* LocalEventCreator.m */,
+			);
+			name = EventCreators;
+			sourceTree = "<group>";
+		};
+		84336D711ABF935A00F18E76 /* UserProfileInterface */ = {
+			isa = PBXGroup;
+			children = (
+				84336D721ABF937100F18E76 /* ViewUserProfileViewController.h */,
+				84336D731ABF937100F18E76 /* ViewUserProfileViewController.m */,
+				84336D741ABF937100F18E76 /* ViewUserProfileViewController.xib */,
+			);
+			name = UserProfileInterface;
 			sourceTree = "<group>";
 		};
 		84733C8F1AB8C2EB00B89ED5 /* SendInvitesInterface */ = {
@@ -383,6 +439,10 @@
 			children = (
 				84733C9B1AB8CF9300B89ED5 /* ContactListPerson.h */,
 				84733C9C1AB8CF9300B89ED5 /* ContactListPerson.m */,
+				84336D6B1ABF8FA700F18E76 /* Event.h */,
+				84336D6C1ABF8FA700F18E76 /* Event.m */,
+				84336D6E1ABF8FB700F18E76 /* LocalEvent.h */,
+				84336D6F1ABF8FB700F18E76 /* LocalEvent.m */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -511,6 +571,7 @@
 			files = (
 				840D84B31AB578920092C886 /* SetupViewController.xib in Resources */,
 				840D850A1AB806A00092C886 /* AboutUsViewController.xib in Resources */,
+				84336D661ABF82D600F18E76 /* ResourcesViewController.xib in Resources */,
 				840D84EE1AB7BD620092C886 /* AccountCreationViewController.xib in Resources */,
 				840D84871AB5699D0092C886 /* Images.xcassets in Resources */,
 				840D84A41AB56D970092C886 /* EventFeedViewController.xib in Resources */,
@@ -519,6 +580,7 @@
 				840D84FF1AB8041F0092C886 /* EditUserProfileViewController.xib in Resources */,
 				840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */,
 				840D84F91AB7F2D10092C886 /* CreatePrivateEventViewController.xib in Resources */,
+				84336D761ABF937100F18E76 /* ViewUserProfileViewController.xib in Resources */,
 				840D84F41AB7F2B90092C886 /* CreateLocalEventViewController.xib in Resources */,
 				840D84AA1AB56DEA0092C886 /* LoginViewController.xib in Resources */,
 				840D85051AB805370092C886 /* SettingsViewController.xib in Resources */,
@@ -579,11 +641,16 @@
 				840D84F31AB7F2B90092C886 /* CreateLocalEventViewController.m in Sources */,
 				840D85091AB806A00092C886 /* AboutUsViewController.m in Sources */,
 				840D84AE1AB56F4E0092C886 /* EventFetcher.m in Sources */,
+				84336D6D1ABF8FA700F18E76 /* Event.m in Sources */,
 				840D847F1AB5699D0092C886 /* AppDelegate.m in Sources */,
 				84733C931AB8C30500B89ED5 /* SendInvitesViewController.m in Sources */,
+				84336D611ABE341300F18E76 /* ContactListParser.m in Sources */,
 				840D84ED1AB7BD620092C886 /* AccountCreationViewController.m in Sources */,
+				84336D6A1ABF8F6700F18E76 /* LocalEventCreator.m in Sources */,
 				840D84A31AB56D970092C886 /* EventFeedViewController.m in Sources */,
+				84336D701ABF8FB700F18E76 /* LocalEvent.m in Sources */,
 				840D84B21AB578920092C886 /* SetupViewController.m in Sources */,
+				84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */,
 				84733C9D1AB8CF9300B89ED5 /* ContactListPerson.m in Sources */,
 				840D84DB1AB76F210092C886 /* NSDataConvert.m in Sources */,
 				840D84E71AB795220092C886 /* EventCreator.m in Sources */,
@@ -592,6 +659,7 @@
 				840D84F81AB7F2D10092C886 /* CreatePrivateEventViewController.m in Sources */,
 				840D850D1AB8080A0092C886 /* Router.m in Sources */,
 				840D847C1AB5699D0092C886 /* main.m in Sources */,
+				84336D751ABF937100F18E76 /* ViewUserProfileViewController.m in Sources */,
 				840D85111AB80A910092C886 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

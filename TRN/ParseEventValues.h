@@ -20,14 +20,12 @@
 #define E_USERS_DECLINED @"usersDeclined"
 #define E_EVENT_LOCATION @"eventLocation"
 
+#define EL_VIEWS @"viewGotten"
 #define EL_LOCATION_COORDINATE @"eventCoordinate"
 #define EL_STATUS @"status"
 #define EL_STATUS_IS_ACTIVE @"1"
 #define EL_STATUS_IS_IN_PROGRESS @"2
 #define EL_STATUS_IS_PAST_DATE @"3
-#define EL_TYPE @"type"
-#define EL_TYPE_FRIEND @"1" //activity is mainly for meeting new friends
-#define EL_TYPE_DATE @"2" //activity is mainly for dating
 
 
 #define EP_ACTIVITY @"activity"

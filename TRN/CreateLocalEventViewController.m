@@ -21,6 +21,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.navigationController.title = @"Creating Local Event";
     self.navigationController.navigationBarHidden = NO;
 }
 

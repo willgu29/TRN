@@ -9,6 +9,8 @@
 #import "SettingsViewController.h"
 #import "AboutUsViewController.h"
 #import "FeedbackViewController.h"
+#import "ResourcesViewController.h"
+#import "EditUserProfileViewController.h"
 
 @interface SettingsViewController ()
 
@@ -31,14 +33,25 @@
 }
 
 #pragma mark -IBActions
+-(IBAction)editProfile:(UIButton *)sender
+{
+    EditUserProfileViewController *editVC = [[EditUserProfileViewController alloc] initWithNibName:@"EditUserProfileViewController" bundle:nil];
+    [self.navigationController pushViewController:editVC animated:YES];
+}
 -(IBAction)about:(UIButton *)sender
 {
     AboutUsViewController *aboutVC = [[AboutUsViewController alloc] initWithNibName:@"AboutUsViewController" bundle:nil];
     [self.navigationController pushViewController:aboutVC animated:YES];
 }
+-(IBAction)resources:(UIButton *)sender
+{
+    ResourcesViewController *resourcesVC = [[ResourcesViewController alloc] initWithNibName:@"ResourcesViewController" bundle:nil];
+    [self.navigationController pushViewController:resourcesVC animated:YES];
+}
 -(IBAction)feedback:(UIButton *)sender
 {
     FeedbackViewController *feedbackVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
 }
+
 
 @end

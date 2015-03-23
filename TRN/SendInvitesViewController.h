@@ -10,6 +10,6 @@
 #import "ContactListFetcher.h"
 
 
-@interface SendInvitesViewController : UIViewController <ContactListFetcherDelegate>
+@interface SendInvitesViewController : UIViewController <ContactListFetcherDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end

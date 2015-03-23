@@ -54,7 +54,7 @@
     NSArray *allPeople = CFBridgingRelease(ABAddressBookCopyArrayOfAllPeople(addressBook));
     return allPeople;
 }
--(void)
+
 
 
 @end
