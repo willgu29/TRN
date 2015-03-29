@@ -26,6 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+
+-(IBAction)createEvent:(UIButton *)sender
+{
+    //TODO: Error Check
+    //TODO: Save all data, make parse event
+    
+}
 
 
 @end

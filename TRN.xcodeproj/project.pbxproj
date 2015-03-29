@@ -54,6 +54,7 @@
 		840D850D1AB8080A0092C886 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850C1AB8080A0092C886 /* Router.m */; };
 		840D85111AB80A910092C886 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D850F1AB80A910092C886 /* FeedbackViewController.m */; };
 		840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85101AB80A910092C886 /* FeedbackViewController.xib */; };
+		841D46A41AC86C520062C233 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841D46A31AC86C520062C233 /* AVFoundation.framework */; };
 		84336D611ABE341300F18E76 /* ContactListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D601ABE341300F18E76 /* ContactListParser.m */; };
 		84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D631ABF82D600F18E76 /* ResourcesViewController.m */; };
 		84336D661ABF82D600F18E76 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84336D641ABF82D600F18E76 /* ResourcesViewController.xib */; };
@@ -156,6 +157,7 @@
 		840D850E1AB80A910092C886 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		840D850F1AB80A910092C886 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		840D85101AB80A910092C886 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		841D46A31AC86C520062C233 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84336D5F1ABE341300F18E76 /* ContactListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListParser.h; sourceTree = "<group>"; };
 		84336D601ABE341300F18E76 /* ContactListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListParser.m; sourceTree = "<group>"; };
 		84336D621ABF82D600F18E76 /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841D46A41AC86C520062C233 /* AVFoundation.framework in Frameworks */,
 				84733C991AB8C49A00B89ED5 /* AddressBook.framework in Frameworks */,
 				840D84E41AB77B240092C886 /* Social.framework in Frameworks */,
 				840D84E01AB77AFF0092C886 /* Accounts.framework in Frameworks */,
@@ -475,6 +478,7 @@
 		FB566796F281489CE9894F3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				841D46A31AC86C520062C233 /* AVFoundation.framework */,
 				84733C981AB8C49A00B89ED5 /* AddressBook.framework */,
 				840D84E31AB77B240092C886 /* Social.framework */,
 				840D84E11AB77B090092C886 /* Accelerate.framework */,

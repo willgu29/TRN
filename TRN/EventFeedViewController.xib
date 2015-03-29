@@ -46,7 +46,7 @@
                     <segments>
                         <segment title="local"/>
                         <segment title="private"/>
-                        <segment title="messaging"/>
+                        <segment title="people"/>
                     </segments>
                 </segmentedControl>
             </subviews>

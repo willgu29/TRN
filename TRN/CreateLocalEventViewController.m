@@ -7,6 +7,7 @@
 //
 
 #import "CreateLocalEventViewController.h"
+#import "AddReasonsViewController.h"
 
 @interface CreateLocalEventViewController ()
 
@@ -47,7 +48,11 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 
 -(IBAction)submit:(UIButton *)sender
 {
+    //TOOD: Error check
+    //TODO: Save data, pass down
     
+    AddReasonsViewController *addVC = [[AddReasonsViewController alloc] initWithNibName:@"AddReasonsViewController" bundle:nil];
+    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 #pragma mark - Text Field Delegate
@@ -61,10 +66,11 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [_eventTitle resignFirstResponder];
-    [_whyMeet resignFirstResponder];
     [_eventActivity resignFirstResponder];
 }
 
+
+#pragma mark - Text View Delegate
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:(NSString *)PLACEHOLDER_TEXTVIEWTEXT])
@@ -119,6 +125,8 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 {
     return 1;
 }
+
+#pragma mark - Helper functions
 
 -(void)addLayerToTextView
 {
