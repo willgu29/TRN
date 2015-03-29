@@ -41,6 +41,7 @@
     [self saveDeviceTokenToParseAndUserDefaults:deviceToken];
     if ([self isLoggedIn])
     {
+        
         [self updateParseCurrentUserDeviceToken:[deviceToken hexadecimalString]];
     }
 }
@@ -84,6 +85,11 @@
 }
 
 #pragma mark - Helper functions
+
+-(void)getUserLocationCoordinates
+{
+    //TODO: Get user location coordinates
+}
 
 -(void)linkParseWithFacebook
 {

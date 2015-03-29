@@ -11,6 +11,8 @@
 @interface AddReasonsViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextField *whyMeet;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *giveOrFind;
+@property (nonatomic, weak) IBOutlet UISwitch *allowFeedback;
 
 @end
 
@@ -32,6 +34,10 @@
 {
     //TODO: Error Check
     //TODO: Save all data, make parse event
+    _localEvent.type = _giveOrFind.selectedSegmentIndex;
+    _localEvent.allowFeedback = _allowFeedback.on;
+    _localEvent.whyMeet = _whyMeet.text;
+    
     
 }
 

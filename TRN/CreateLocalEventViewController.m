@@ -8,12 +8,16 @@
 
 #import "CreateLocalEventViewController.h"
 #import "AddReasonsViewController.h"
+#import "LocalEvent.h"
+#import <Parse/Parse.h>
 
 @interface CreateLocalEventViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *characterCount;
+@property (nonatomic, weak) IBOutlet UISwitch *isFlexible;
 @property (nonatomic, weak) IBOutlet UITextView *eventActivity;
 @property (nonatomic, weak) IBOutlet UITextField *eventTitle;
+@property (nonatomic, weak) IBOutlet UIPickerView *whoPicker;
 @property (nonatomic, strong) NSArray *whoCanSee;
 
 
@@ -50,6 +54,12 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 {
     //TOOD: Error check
     //TODO: Save data, pass down
+    LocalEvent *localEvent = [[LocalEvent alloc] init];
+    localEvent.isFlexibleAboutEvent = _isFlexible.on;
+    localEvent.eventName = _eventTitle.text;
+    localEvent.eventActivity = _eventActivity.text;
+    localEvent.hostName = [PFUser currentUser].username;
+    localEvent.whoCanSeeEvent = [_whoPicker selectedRowInComponent:0];
     
     AddReasonsViewController *addVC = [[AddReasonsViewController alloc] initWithNibName:@"AddReasonsViewController" bundle:nil];
     [self.navigationController pushViewController:addVC animated:YES];

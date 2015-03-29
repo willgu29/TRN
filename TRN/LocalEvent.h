@@ -16,5 +16,6 @@
 
 @property (nonatomic) int viewsGotten;
 @property (nonatomic) int type; //give or find
+@property (nonatomic) BOOL isFlexibleAboutEvent;
 
 @end
