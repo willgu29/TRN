@@ -10,6 +10,8 @@
 #import "AddReasonsViewController.h"
 #import "LocalEvent.h"
 #import <Parse/Parse.h>
+#import "ErrorCodeValues.h"
+#import "EventErrorChecker.h"
 
 @interface CreateLocalEventViewController ()
 
@@ -52,17 +54,20 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 
 -(IBAction)submit:(UIButton *)sender
 {
-    //TOOD: Error check
-    //TODO: Save data, pass down
-    LocalEvent *localEvent = [[LocalEvent alloc] init];
-    localEvent.isFlexibleAboutEvent = _isFlexible.on;
-    localEvent.eventName = _eventTitle.text;
-    localEvent.eventActivity = _eventActivity.text;
-    localEvent.hostName = [PFUser currentUser].username;
-    localEvent.whoCanSeeEvent = [_whoPicker selectedRowInComponent:0];
+
+    LocalEvent *localEvent = [self createLocalEventData];
+    int errorCode = [self isLocalEventValid:localEvent];
+    if (errorCode == NO_ERROR)
+    {
+        AddReasonsViewController *addVC = [[AddReasonsViewController alloc] initWithNibName:@"AddReasonsViewController" bundle:nil];
+        addVC.localEvent = localEvent;
+        [self.navigationController pushViewController:addVC animated:YES];
+    }
+    else
+    {
+        [EventErrorChecker displayAlertErrorWithCode:errorCode];
+    }
     
-    AddReasonsViewController *addVC = [[AddReasonsViewController alloc] initWithNibName:@"AddReasonsViewController" bundle:nil];
-    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 #pragma mark - Text Field Delegate
@@ -106,15 +111,15 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     // Prevent crashing undo bug – see note below.
-    if(range.length + range.location > textView.text.length)
+    if(range.length + range.location > textView.text.length || [text isEqualToString:@"\n"])
     {
+        [textView resignFirstResponder];
         return NO;
     }
     
     NSUInteger newLength = [textView.text length] + [text length] - range.length;
     return (newLength > 70) ? NO : YES;
 }
-
 
 
 #pragma mark - Picker view
@@ -145,5 +150,35 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
     imageLayer.borderWidth = 1;
     imageLayer.borderColor = [UIColor lightGrayColor].CGColor;
 }
+
+-(LocalEvent *)createLocalEventData
+{
+    LocalEvent *localEvent = [[LocalEvent alloc] init];
+    localEvent.isFlexibleAboutEvent = _isFlexible.on;
+    localEvent.eventName = _eventTitle.text;
+    localEvent.eventActivity = _eventActivity.text;
+    localEvent.hostName = [PFUser currentUser].username;
+    localEvent.whoCanSeeEvent = [_whoPicker selectedRowInComponent:0];
+    return localEvent;
+}
+
+-(int)isLocalEventValid:(LocalEvent *)localEvent
+{
+    if ([localEvent.eventName isEqualToString:@""])
+    {
+        return NO_EVENT_NAME;
+    }
+    else if ([localEvent.eventActivity isEqualToString:(NSString *)PLACEHOLDER_TEXTVIEWTEXT])
+    {
+        return NO_EVENT_ACTIVITY;
+    }
+    else if (localEvent.hostName == nil)
+    {
+        return NO_HOST_USERNAME;
+    }
+    return NO_ERROR;
+}
+
+
 
 @end

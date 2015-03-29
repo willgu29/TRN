@@ -56,10 +56,11 @@
 		840D85121AB80A910092C886 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D85101AB80A910092C886 /* FeedbackViewController.xib */; };
 		841D46A41AC86C520062C233 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841D46A31AC86C520062C233 /* AVFoundation.framework */; };
 		841D46A81AC8A82E0062C233 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841D46A71AC8A82E0062C233 /* MapKit.framework */; };
+		841D46AC1AC8B02A0062C233 /* EventErrorChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D46AB1AC8B02A0062C233 /* EventErrorChecker.m */; };
+		841D46AF1AC8BC080062C233 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D46AE1AC8BC080062C233 /* Audio.m */; };
 		84336D611ABE341300F18E76 /* ContactListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D601ABE341300F18E76 /* ContactListParser.m */; };
 		84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D631ABF82D600F18E76 /* ResourcesViewController.m */; };
 		84336D661ABF82D600F18E76 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84336D641ABF82D600F18E76 /* ResourcesViewController.xib */; };
-		84336D6A1ABF8F6700F18E76 /* LocalEventCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D691ABF8F6700F18E76 /* LocalEventCreator.m */; };
 		84336D6D1ABF8FA700F18E76 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D6C1ABF8FA700F18E76 /* Event.m */; };
 		84336D701ABF8FB700F18E76 /* LocalEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D6F1ABF8FB700F18E76 /* LocalEvent.m */; };
 		84336D751ABF937100F18E76 /* ViewUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D731ABF937100F18E76 /* ViewUserProfileViewController.m */; };
@@ -161,13 +162,16 @@
 		841D46A31AC86C520062C233 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		841D46A61AC8A4300062C233 /* WhoCanSeeValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhoCanSeeValues.h; sourceTree = "<group>"; };
 		841D46A71AC8A82E0062C233 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		841D46A91AC8AC170062C233 /* ErrorCodeValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorCodeValues.h; sourceTree = "<group>"; };
+		841D46AA1AC8B02A0062C233 /* EventErrorChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventErrorChecker.h; sourceTree = "<group>"; };
+		841D46AB1AC8B02A0062C233 /* EventErrorChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventErrorChecker.m; sourceTree = "<group>"; };
+		841D46AD1AC8BC080062C233 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
+		841D46AE1AC8BC080062C233 /* Audio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Audio.m; sourceTree = "<group>"; };
 		84336D5F1ABE341300F18E76 /* ContactListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListParser.h; sourceTree = "<group>"; };
 		84336D601ABE341300F18E76 /* ContactListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListParser.m; sourceTree = "<group>"; };
 		84336D621ABF82D600F18E76 /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
 		84336D631ABF82D600F18E76 /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
 		84336D641ABF82D600F18E76 /* ResourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
-		84336D681ABF8F6700F18E76 /* LocalEventCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalEventCreator.h; sourceTree = "<group>"; };
-		84336D691ABF8F6700F18E76 /* LocalEventCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalEventCreator.m; sourceTree = "<group>"; };
 		84336D6B1ABF8FA700F18E76 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		84336D6C1ABF8FA700F18E76 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		84336D6E1ABF8FB700F18E76 /* LocalEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalEvent.h; sourceTree = "<group>"; };
@@ -326,7 +330,10 @@
 		840D84AB1AB56F3D0092C886 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				84336D671ABF8F5500F18E76 /* EventCreators */,
+				841D46AD1AC8BC080062C233 /* Audio.h */,
+				841D46AE1AC8BC080062C233 /* Audio.m */,
+				841D46AA1AC8B02A0062C233 /* EventErrorChecker.h */,
+				841D46AB1AC8B02A0062C233 /* EventErrorChecker.m */,
 				84336D5E1ABE33FD00F18E76 /* ContactList */,
 				840D84AC1AB56F4E0092C886 /* EventFetcher.h */,
 				840D84AD1AB56F4E0092C886 /* EventFetcher.m */,
@@ -409,6 +416,7 @@
 				84733C8E1AB8202C00B89ED5 /* ParseEventValues.h */,
 				840D84DC1AB772B50092C886 /* ParseUserValues.h */,
 				841D46A61AC8A4300062C233 /* WhoCanSeeValues.h */,
+				841D46A91AC8AC170062C233 /* ErrorCodeValues.h */,
 			);
 			name = ConstantValues;
 			sourceTree = "<group>";
@@ -422,15 +430,6 @@
 				84336D601ABE341300F18E76 /* ContactListParser.m */,
 			);
 			name = ContactList;
-			sourceTree = "<group>";
-		};
-		84336D671ABF8F5500F18E76 /* EventCreators */ = {
-			isa = PBXGroup;
-			children = (
-				84336D681ABF8F6700F18E76 /* LocalEventCreator.h */,
-				84336D691ABF8F6700F18E76 /* LocalEventCreator.m */,
-			);
-			name = EventCreators;
 			sourceTree = "<group>";
 		};
 		84336D711ABF935A00F18E76 /* UserProfileInterface */ = {
@@ -677,15 +676,16 @@
 				840D84F31AB7F2B90092C886 /* CreateLocalEventViewController.m in Sources */,
 				840D85091AB806A00092C886 /* AboutUsViewController.m in Sources */,
 				840D84AE1AB56F4E0092C886 /* EventFetcher.m in Sources */,
+				841D46AF1AC8BC080062C233 /* Audio.m in Sources */,
 				84336D6D1ABF8FA700F18E76 /* Event.m in Sources */,
 				840D847F1AB5699D0092C886 /* AppDelegate.m in Sources */,
 				84733C931AB8C30500B89ED5 /* SendInvitesViewController.m in Sources */,
 				84336D611ABE341300F18E76 /* ContactListParser.m in Sources */,
 				840D84ED1AB7BD620092C886 /* AccountCreationViewController.m in Sources */,
-				84336D6A1ABF8F6700F18E76 /* LocalEventCreator.m in Sources */,
 				840D84A31AB56D970092C886 /* EventFeedViewController.m in Sources */,
 				84336D701ABF8FB700F18E76 /* LocalEvent.m in Sources */,
 				840D84B21AB578920092C886 /* SetupViewController.m in Sources */,
+				841D46AC1AC8B02A0062C233 /* EventErrorChecker.m in Sources */,
 				84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */,
 				84733C9D1AB8CF9300B89ED5 /* ContactListPerson.m in Sources */,
 				840D84DB1AB76F210092C886 /* NSDataConvert.m in Sources */,

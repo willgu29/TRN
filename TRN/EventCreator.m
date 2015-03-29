@@ -17,6 +17,16 @@
     
 }
 
+-(void)createLocalParseEvent:(LocalEvent *)localEventData
+{
+    PFObject *localEvent = [PFObject objectWithClassName:@"LocalEvents"];
+    
+    [localEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+    }];
+
+}
+
 -(void)createPrivateParseEvent
 {
     PFObject *privateEvent = [PFObject objectWithClassName:@"PrivateEvents"];

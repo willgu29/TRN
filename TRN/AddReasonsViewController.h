@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LocalEvent.h"
 
-@interface AddReasonsViewController : UIViewController
+@interface AddReasonsViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) LocalEvent *localEvent; //Get from parent 
 

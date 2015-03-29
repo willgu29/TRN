@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocalEvent.h"
 
 @interface EventCreator : NSObject
 
 -(void)createEventOfTheDay;
--(void)createLocalParseEvent;
+-(void)createLocalParseEvent:(LocalEvent *)localEvent;
 -(void)createPrivateParseEvent;
 
 @end
