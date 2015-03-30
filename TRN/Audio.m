@@ -8,14 +8,37 @@
 
 #import "Audio.h"
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 @implementation Audio
 
 -(void)playground
 {
     
+    
+    
+   
+
+    
+}
+
+- (void) audioRecorderDidFinishRecording:(AVAudioRecorder *)avrecorder successfully:(BOOL)flag{
+
+}
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Done"
+                                                    message: @"Finish playing the recording!"
+                                                   delegate: nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+#pragma mark - helper functions
+
+-(AVAudioRecorder *)setupRecorder
+{
     AVAudioRecorder *recorder;
-    AVAudioPlayer *player;
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
@@ -39,7 +62,41 @@
     recorder.delegate = self;
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
+    return recorder;
+    
 }
+-(void)setupPlayer
+{
+    AVAudioPlayer *player;
+    AVAudioRecorder *recorder = [self setupRecorder];
+    if (player.playing) {
+        [player stop];
+    }
+    
+    if (!recorder.recording) {
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        // Start recording
+        [recorder record];
+        
+    } else {
+        // Pause recording
+        [recorder pause];
+    }
+    [recorder stop];
+    
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+    
 
+}
+-(void)startPlaybackWithURL:(NSURL *)recordingURL
+{
+    AVAudioPlayer *player;
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:recordingURL  error:nil];
+    [player setDelegate:self];
+    [player play];
+}
 
 @end
