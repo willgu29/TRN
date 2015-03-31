@@ -60,6 +60,24 @@
                         <action selector="createAudioClip:" destination="-1" eventType="touchUpInside" id="2Pv-vf-o2U"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-3i-iTh">
+                    <rect key="frame" x="106" y="307" width="108" height="30"/>
+                    <state key="normal" title="Stop Recording">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="stopRecording:" destination="-1" eventType="touchUpInside" id="833-e7-wEd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-g0-9Xy">
+                    <rect key="frame" x="108" y="231" width="104" height="30"/>
+                    <state key="normal" title="Play Recording">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playRecording:" destination="-1" eventType="touchUpInside" id="w7l-ch-IyV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

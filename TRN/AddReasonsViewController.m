@@ -9,11 +9,17 @@
 #import "AddReasonsViewController.h"
 #import "ErrorCodeValues.h"
 #import "EventErrorChecker.h"
+#import "Audio.h"
+#import <AVFoundation/AVFoundation.h>
+
+
 @interface AddReasonsViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextField *whyMeet;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *giveOrFind;
 @property (nonatomic, weak) IBOutlet UISwitch *allowFeedback;
+
+@property (nonatomic, strong) Audio *audioDevice;
 
 @end
 
@@ -45,9 +51,22 @@
 
 -(IBAction)createAudioClip:(UIButton *)sender
 {
-    
+    _audioDevice = [[Audio alloc] init];
+    [_audioDevice setupRecorder];
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:YES error:nil];
+    [_audioDevice.recorder record];
 }
-
+-(IBAction)playRecording:(UIButton *)sender
+{
+    [_audioDevice startPlayback];
+}
+-(IBAction)stopRecording:(id)sender
+{
+    [_audioDevice.recorder stop];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+}
 -(IBAction)createEvent:(UIButton *)sender
 {
     [self updateLocalEventObject];

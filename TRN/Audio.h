@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface Audio : NSObject
+@interface Audio : NSObject <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
+
+-(void)setupRecorder;
+-(BOOL)startRecording;
+-(void)startPlayback;
+-(void)stopRecording;
+-(void)stopPlayback;
+
+
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) AVAudioPlayer *player;
+
 
 @end

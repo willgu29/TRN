@@ -7,7 +7,6 @@
 //
 
 #import "Audio.h"
-#import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
 @implementation Audio
@@ -36,9 +35,8 @@
 
 #pragma mark - helper functions
 
--(AVAudioRecorder *)setupRecorder
+-(void)setupRecorder
 {
-    AVAudioRecorder *recorder;
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
@@ -58,45 +56,41 @@
     [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
     
     // Initiate and prepare the recorder
-    recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:NULL];
-    recorder.delegate = self;
-    recorder.meteringEnabled = YES;
-    [recorder prepareToRecord];
-    return recorder;
+    _recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:NULL];
+    _recorder.delegate = self;
+    _recorder.meteringEnabled = YES;
+    [_recorder prepareToRecord];
+    
     
 }
--(void)setupPlayer
+-(BOOL)startRecording
 {
-    AVAudioPlayer *player;
-    AVAudioRecorder *recorder = [self setupRecorder];
-    if (player.playing) {
-        [player stop];
-    }
-    
-    if (!recorder.recording) {
+    if (!_recorder.recording)
+    {
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:nil];
         // Start recording
-        [recorder record];
-        
-    } else {
-        // Pause recording
-        [recorder pause];
+        return [_recorder record];
     }
-    [recorder stop];
-    
-    
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setActive:NO error:nil];
-    
-
+    return NO;
 }
--(void)startPlaybackWithURL:(NSURL *)recordingURL
+-(void)stopRecording
 {
-    AVAudioPlayer *player;
-    player = [[AVAudioPlayer alloc] initWithContentsOfURL:recordingURL  error:nil];
-    [player setDelegate:self];
-    [player play];
+    [_recorder stop];
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:NO error:nil];
+}
+
+-(void)startPlayback//WithURL:(NSURL *)recordingURL
+{
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:_recorder.url  error:nil];
+    [_player setDelegate:self];
+    [_player play];
+}
+-(void)stopPlayback
+{
+    [_player stop];
+    
 }
 
 @end
