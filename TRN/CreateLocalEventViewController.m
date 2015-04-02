@@ -11,6 +11,7 @@
 #import "LocalEvent.h"
 #import <Parse/Parse.h>
 #import "ErrorCodeValues.h"
+#import "Location.h"
 #import "EventErrorChecker.h"
 
 @interface CreateLocalEventViewController ()

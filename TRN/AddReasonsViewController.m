@@ -11,7 +11,6 @@
 #import "EventErrorChecker.h"
 #import "Audio.h"
 #import <AVFoundation/AVFoundation.h>
-#import "EventCreator.h"
 
 @interface AddReasonsViewController ()
 
@@ -73,7 +72,8 @@
     int errorCode = [self isLocalEventValid];
     if (errorCode == NO_ERROR)
     {
-        [EventCreator createLocalParseEvent:_localEvent];
+        [EventCreator shared].delegate = self;
+        [[EventCreator shared] createLocalParseEvent:_localEvent];
     }
     else
     {
@@ -119,6 +119,27 @@
     {
         _whyMeet.placeholder = @"Describe what you're looking for.";
     }
+}
+
+#pragma mark - Location Delegate
+
+-(void)eventCreationSuccess
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self presentSuccessAlertView];
+
+}
+-(void)eventCreationFailure:(NSError *)error
+{
+    NSLog(@"Uh oh: %@", error);
+}
+#pragma mark - Helper functions
+-(void)presentSuccessAlertView
+{
+    //TODO: Limit # of events possible to create
+    NSString *alertString = [NSString stringWithFormat:@"Your event was created and will expire in 7 days. You can create %d more events.",3];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Awesome!" message:alertString delegate:nil cancelButtonTitle:@"Okay"otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end

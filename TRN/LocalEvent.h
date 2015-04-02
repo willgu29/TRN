@@ -12,7 +12,6 @@
 @interface LocalEvent : Event
 
 @property (nonatomic, strong) NSString *whyMeet;
-@property (nonatomic) CLLocationCoordinate2D hostLocation;
 
 @property (nonatomic) int viewsGotten;
 @property (nonatomic) int type; //give or find (0 or 1)

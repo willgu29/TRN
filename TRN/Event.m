@@ -8,6 +8,7 @@
 
 #import "Event.h"
 #import <Parse/Parse.h>
+#import "Location.h"
 
 @implementation Event
 
@@ -18,6 +19,8 @@
     {
         _uuid = [[NSUUID UUID] UUIDString];
         _hostName = [PFUser currentUser].username;
+        _eventLocationCoordinate = [Location shared].userLocation;
+
     }
     return self;
 }
