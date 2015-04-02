@@ -11,14 +11,14 @@
 
 @interface Event : NSObject
 
-@property (nonatomic, strong) NSString *eventName;
 @property (nonatomic, strong) NSString *eventActivity;
 @property (nonatomic, strong) NSString *hostName;
 @property (nonatomic, strong) NSString *eventLocation;
-@property (nonatomic) CLLocationCoordinate2D *eventLocationCoordinate;
+@property (nonatomic) CLLocationCoordinate2D eventLocationCoordinate;
 @property (nonatomic) BOOL allowFeedback;
 @property (nonatomic) int whoCanSeeEvent;
-@property (nonatomic) int uuid;
+@property (nonatomic, strong) NSString* uuid; //Automatically created on init
 
+-(instancetype)init;
 
 @end

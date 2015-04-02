@@ -11,7 +11,7 @@
 #import "EventErrorChecker.h"
 #import "Audio.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "EventCreator.h"
 
 @interface AddReasonsViewController ()
 
@@ -73,7 +73,7 @@
     int errorCode = [self isLocalEventValid];
     if (errorCode == NO_ERROR)
     {
-        //TODO: Save all data, make parse event
+        [EventCreator createLocalParseEvent:_localEvent];
     }
     else
     {

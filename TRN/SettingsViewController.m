@@ -34,6 +34,10 @@
 }
 
 #pragma mark -IBActions
+-(IBAction)logout:(UIButton *)sender
+{
+    
+}
 -(IBAction)editProfile:(UIButton *)sender
 {
     EditUserProfileViewController *editVC = [[EditUserProfileViewController alloc] initWithNibName:@"EditUserProfileViewController" bundle:nil];

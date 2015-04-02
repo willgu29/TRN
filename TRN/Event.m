@@ -7,7 +7,19 @@
 //
 
 #import "Event.h"
+#import <Parse/Parse.h>
 
 @implementation Event
+
+-(instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        _uuid = [[NSUUID UUID] UUIDString];
+        _hostName = [PFUser currentUser].username;
+    }
+    return self;
+}
 
 @end

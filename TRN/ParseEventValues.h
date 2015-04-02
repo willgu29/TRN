@@ -12,29 +12,39 @@
 //EL = eventLocal
 //EP = eventPrivate
 
-#define E_TITLE @"title
 #define E_EVENT_ID @"eventID"
-#define E_HOST_USERNAME @"hostUsername
-#define E_USERS_INVITED @"usersInvited"
+#define E_HOST_USERNAME @"hostUsername"
 #define E_USERS_ACCEPTED @"usersAccepted"
 #define E_USERS_DECLINED @"usersDeclined"
 #define E_EVENT_LOCATION @"eventLocation"
+#define E_ACTIVITY @"activity"
+
 
 #define EL_VIEWS @"viewGotten"
 #define EL_LOCATION_COORDINATE @"eventCoordinate"
+#define EL_WHY_MEET @"whyMeet"
+#define EL_WHO_CAN_SEE @"whoCanSee"
+#define EL_WHO_CAN_SEE_EVERYONE 0
+#define EL_WHO_CAN_SEE_ONLY_GUYS 1
+#define EL_WHO_CAN_SEE_ONLY_GIRLS 2
+
+#define EL_TYPE @"type" //give or find
+#define EL_TYPE_GIVE 0
+#define EL_TYPE_FIND 1
 #define EL_STATUS @"status"
-#define EL_STATUS_IS_ACTIVE @"1"
-#define EL_STATUS_IS_IN_PROGRESS @"2
-#define EL_STATUS_IS_PAST_DATE @"3
+#define EL_STATUS_IS_ACTIVE 1
+#define EL_STATUS_IS_IN_PROGRESS 2
+#define EL_STATUS_IS_PAST_DATE 3
 
 
-#define EP_ACTIVITY @"activity"
+#define EP_TITLE @"title"
+#define EP_USERS_INVITED @"usersInvited"
 #define EP_START_DATE @"startDate"
 #define EP_DURATION @"duration"
 #define EP_END_DATE @"endDate"
 #define EP_TYPE @"type"
-#define EP_TYPE_CLOSED @"1" //only host can invite people
-#define EP_TYPE_OPEN @"2" //friends can invite their friends
+#define EP_TYPE_CLOSED 1 //only host can invite people
+#define EP_TYPE_OPEN 2 //friends can invite their friends
 
 
 #endif

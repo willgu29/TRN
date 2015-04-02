@@ -16,6 +16,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "NSUserDefaultValues.h"
 #import "Router.h"
+#import "Location.h"
 
 @interface AppDelegate ()
 
@@ -30,10 +31,17 @@
     [self linkParseWithFacebook];
     [self setupPushNotifications:application];
     [self setupWindowWithRootViewController:[self getRootViewController]];
-
+    [self getUserLocation];
     return YES;
 }
 
+#pragma mark - Register Location 
+
+
+-(void)getUserLocation
+{
+    [[Location shared] updateUserLocation];
+}
 
 #pragma mark - Register Push Notifications
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

@@ -18,7 +18,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *characterCount;
 @property (nonatomic, weak) IBOutlet UISwitch *isFlexible;
 @property (nonatomic, weak) IBOutlet UITextView *eventActivity;
-@property (nonatomic, weak) IBOutlet UITextField *eventTitle;
 @property (nonatomic, weak) IBOutlet UIPickerView *whoPicker;
 @property (nonatomic, strong) NSArray *whoCanSee;
 
@@ -36,7 +35,7 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
     [self addLayerToTextView];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"Create Local Event";
-    _whoCanSee = @[@"Everyone", @"Only Friends", @"Friends + Girls", @"Friends + Guys", @"Only Guys", @"Only Girls"];
+    _whoCanSee = @[@"Everyone", @"Only Guys", @"Only Girls"]; //@"Only Friends", @"Friends + Girls", @"Friends + Guys",
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -80,7 +79,6 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [_eventTitle resignFirstResponder];
     [_eventActivity resignFirstResponder];
 }
 
@@ -155,20 +153,14 @@ const NSString* PLACEHOLDER_TEXTVIEWTEXT = @"Suggest an activity...";
 {
     LocalEvent *localEvent = [[LocalEvent alloc] init];
     localEvent.isFlexibleAboutEvent = _isFlexible.on;
-    localEvent.eventName = _eventTitle.text;
     localEvent.eventActivity = _eventActivity.text;
-    localEvent.hostName = [PFUser currentUser].username;
     localEvent.whoCanSeeEvent = [_whoPicker selectedRowInComponent:0];
     return localEvent;
 }
 
 -(int)isLocalEventValid:(LocalEvent *)localEvent
 {
-    if ([localEvent.eventName isEqualToString:@""])
-    {
-        return NO_EVENT_NAME;
-    }
-    else if ([localEvent.eventActivity isEqualToString:(NSString *)PLACEHOLDER_TEXTVIEWTEXT])
+    if ([localEvent.eventActivity isEqualToString:(NSString *)PLACEHOLDER_TEXTVIEWTEXT])
     {
         return NO_EVENT_ACTIVITY;
     }

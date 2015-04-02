@@ -9,10 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "LocalEvent.h"
 
+@protocol EventCreatorDelegate <NSObject>
+
+-(void)eventCreationSuccess;
+-(void)eventCreationFailure:(NSError *)error;
+
+@end
+
+
 @interface EventCreator : NSObject
 
 -(void)createEventOfTheDay;
 -(void)createLocalParseEvent:(LocalEvent *)localEvent;
 -(void)createPrivateParseEvent;
+
++(instancetype)shared;
+@property (nonatomic, assign) id delegate;
 
 @end

@@ -14,6 +14,7 @@
 #import <Parse/Parse.h>
 #import "ParseUserValues.h"
 #import "NSUserDefaultValues.h"
+#import "Location.h"
 
 @interface LoginViewController ()
 
@@ -80,6 +81,8 @@
     currentUser[U_BIRTHDAY] = [userInfo valueForKey:@"birthday"];
     currentUser[U_GENDER] = [userInfo valueForKey:@"gender"];
     currentUser[U_WARNINGS_GIVEN] = [NSNumber numberWithInt:0];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:[Location shared].userLocation];
+    currentUser[U_LOCATION_COORDINATE] = geoPoint;
     [currentUser saveInBackground];
 }
 -(void)displayPleaseLoginAlert

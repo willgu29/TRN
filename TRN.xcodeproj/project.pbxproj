@@ -58,6 +58,7 @@
 		841D46A81AC8A82E0062C233 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841D46A71AC8A82E0062C233 /* MapKit.framework */; };
 		841D46AC1AC8B02A0062C233 /* EventErrorChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D46AB1AC8B02A0062C233 /* EventErrorChecker.m */; };
 		841D46AF1AC8BC080062C233 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D46AE1AC8BC080062C233 /* Audio.m */; };
+		841D46B21ACDB9B10062C233 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D46B11ACDB9B10062C233 /* Location.m */; };
 		84336D611ABE341300F18E76 /* ContactListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D601ABE341300F18E76 /* ContactListParser.m */; };
 		84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84336D631ABF82D600F18E76 /* ResourcesViewController.m */; };
 		84336D661ABF82D600F18E76 /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84336D641ABF82D600F18E76 /* ResourcesViewController.xib */; };
@@ -167,6 +168,8 @@
 		841D46AB1AC8B02A0062C233 /* EventErrorChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventErrorChecker.m; sourceTree = "<group>"; };
 		841D46AD1AC8BC080062C233 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
 		841D46AE1AC8BC080062C233 /* Audio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Audio.m; sourceTree = "<group>"; };
+		841D46B01ACDB9B10062C233 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		841D46B11ACDB9B10062C233 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		84336D5F1ABE341300F18E76 /* ContactListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListParser.h; sourceTree = "<group>"; };
 		84336D601ABE341300F18E76 /* ContactListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListParser.m; sourceTree = "<group>"; };
 		84336D621ABF82D600F18E76 /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 				840D84E61AB795220092C886 /* EventCreator.m */,
 				840D850B1AB8080A0092C886 /* Router.h */,
 				840D850C1AB8080A0092C886 /* Router.m */,
+				841D46B01ACDB9B10062C233 /* Location.h */,
+				841D46B11ACDB9B10062C233 /* Location.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 				840D84ED1AB7BD620092C886 /* AccountCreationViewController.m in Sources */,
 				840D84A31AB56D970092C886 /* EventFeedViewController.m in Sources */,
 				84336D701ABF8FB700F18E76 /* LocalEvent.m in Sources */,
+				841D46B21ACDB9B10062C233 /* Location.m in Sources */,
 				840D84B21AB578920092C886 /* SetupViewController.m in Sources */,
 				841D46AC1AC8B02A0062C233 /* EventErrorChecker.m in Sources */,
 				84336D651ABF82D600F18E76 /* ResourcesViewController.m in Sources */,

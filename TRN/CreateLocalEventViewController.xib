@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="characterCount" destination="a0k-QT-wkr" id="ylR-At-R9d"/>
                 <outlet property="eventActivity" destination="eQm-5C-d3a" id="1eD-gJ-fUg"/>
-                <outlet property="eventTitle" destination="DaA-ac-tkO" id="hLl-ZG-bXh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,14 +55,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-ac-tkO">
-                    <rect key="frame" x="8" y="114" width="304" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="wbG-Rc-S8G"/>
-                    </connections>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGC-0C-Rz9">
                     <rect key="frame" x="118" y="520" width="84" height="48"/>
                     <state key="normal" title="Next">

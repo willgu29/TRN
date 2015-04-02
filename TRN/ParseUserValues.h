@@ -19,6 +19,7 @@
 #define U_FULL_NAME @"fullName"
 #define U_GENDER @"gender"
 #define U_WARNINGS_GIVEN @"warningsGiven"
+#define U_LOCATION_COORDINATE @"locationCoordinate"
 
 
 #endif

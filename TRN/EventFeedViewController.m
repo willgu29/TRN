@@ -10,6 +10,8 @@
 #import "SettingsViewController.h"
 #import "Router.h"
 #import "CreateEventViewController.h"
+#import <Parse/Parse.h>
+#import "ParseUserValues.h"
 
 @interface EventFeedViewController ()
 
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self fetchAndSaveUserLocationToParse];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -76,6 +79,22 @@
 {
     UIViewController *userProfileVC = [Router createUserProfileVCWithUsername:username];
     [self.navigationController pushViewController:userProfileVC animated:YES];
+}
+-(void)fetchAndSaveUserLocationToParse
+{
+    [Location shared].delegate = self;
+    [[Location shared] updateUserLocation];
+}
+-(void)saveUserLocationToParse:(CLLocation *)location
+{
+    PFUser *currentUser = [PFUser currentUser];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:location];
+    currentUser[U_LOCATION_COORDINATE] = geoPoint;
+    [currentUser saveInBackground];
+}
+-(void)userlocationCoordinate:(CLLocation *)location
+{
+    [self saveUserLocationToParse:location];
 }
 
 @end

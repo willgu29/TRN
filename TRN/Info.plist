@@ -18,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to find cool people to meet around you.</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

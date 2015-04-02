@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
 
-@interface EventFeedViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface EventFeedViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, LocationDelegate>
 
 @end
